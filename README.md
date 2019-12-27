@@ -1,2 +1,0 @@
-# PersonalDetails
-Created with CodeSandbox
