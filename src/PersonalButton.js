@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Button from "@material-ui/core/Button";
 
 class PersonalButton extends Component {
   constructor(props) {
@@ -6,7 +7,13 @@ class PersonalButton extends Component {
     this.state = {};
   }
   render() {
-    return <div>Personal Button</div>;
+    return (
+      <div>
+        <Button variant="contained" color="secondary">
+          {this.props.PersonalBtnValue}
+        </Button>
+      </div>
+    );
   }
 }
 export default PersonalButton;
