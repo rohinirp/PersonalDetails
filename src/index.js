@@ -21,7 +21,9 @@ function App() {
     //   </div>
     // </div>
     <div>
-      <Login />
+      <div>
+        <Login />
+      </div>
     </div>
   );
 }
