@@ -14,6 +14,8 @@ class PersonalText extends Component {
         <TextField
           id="outlined-basic"
           label={this.props.PersonalLabel}
+          value={this.props.value}
+          onChange={this.props.onChange}
           variant="outlined"
         />
       </div>

@@ -9,7 +9,11 @@ class PersonalButton extends Component {
   render() {
     return (
       <div>
-        <Button variant="contained" color="secondary">
+        <Button
+          variant="contained"
+          color="secondary"
+          onClick={this.props.onClick}
+        >
           {this.props.PersonalBtnValue}
         </Button>
       </div>

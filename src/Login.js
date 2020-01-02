@@ -6,16 +6,36 @@ import PersonalButton from "./PersonalButton";
 class Login extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      user : '' , 
+      pass : ''
+    };
+  }
+  changeUser=(e)=>{
+this.setState({
+  user : e.target.value
+})
+  }
+
+  changePassword(e){
+this.setState({
+  pass : e.target.value
+})
+  }
+  signUp=()=>{
+    alert('sign up')
+  }
+  signIn=()=>{
+    if(this.state.user === this.setState)
   }
   render() {
     return (
       <div>
-        <PersonalText PersonalLabel={"User Name"} />
-        <PersonalText PersonalLabel={"Password"} />
+        <PersonalText PersonalLabel={"User Name"} value={this.state.user} onChange={(e)=>this.changeUser(e)} />
+        <PersonalText PersonalLabel={"Password"} value={this.state.pass}  onChange={(e)=>this.changePassword(e)}/>
         <PersonalDropdwn />
-        <PersonalButton PersonalBtnValue={"Sign Up"} />
-        <PersonalButton PersonalBtnValue={"Sign In"} />
+        <PersonalButton PersonalBtnValue={"Sign Up"} onClick={this.signUp} />
+        <PersonalButton PersonalBtnValue={"Sign In"} onClick={this.signIn} />
       </div>
     );
   }
