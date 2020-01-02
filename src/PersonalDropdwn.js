@@ -6,29 +6,29 @@ class PersonalDropdwn extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: 10
+    
     };
   }
-  selectValue(e) {
-    this.setState({
-      data: e.target.value
-    });
-  }
+
   render() {
+
     console.log("1");
+    var data = this.props.menuData ? this.props.menuData : []
     return (
       <div>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={this.state.data}
-          onChange={e => {
-            this.selectValue(e);
-          }}
+          value={this.props.value}
+          onChange={this.props.onChange}
         >
-          <MenuItem value={10}>10</MenuItem>
-          <MenuItem value={20}>20</MenuItem>
-          <MenuItem value={30}>30</MenuItem>
+          {
+            data.map((item)=>{
+              return <MenuItem value={item}>{item}</MenuItem>
+            })
+          }
+          
+        
         </Select>
       </div>
     );
