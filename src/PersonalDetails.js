@@ -1,18 +1,15 @@
 import React, { Component } from "react";
 import NormalText from "./NormalText";
 
-var Menus = ["UserName", "Age", "Qualification", "Mobile", "Email"];
-class UserDetails extends Component {
+class PersonalDetails extends Component {
   constructor(props) {
     super(props);
     this.state = {
       Total: [
         {
-          UserName: "1",
-          Age: "2",
-          Qualification: "3",
-          Mobile: "4",
-          Email: "5"
+          FathersName: "6",
+          MothersName: "7",
+          Occupation: "8"
         }
       ]
     };
@@ -25,11 +22,12 @@ class UserDetails extends Component {
       Total: Tot
     });
   };
+
   render() {
     return this.state.Total.map((item, index) => {
       return Object.keys(item).map((key, ind) => {
         return (
-          <div style={{ float: "left", paddingRight: "15%" }}>
+          <div style={{ float: "left", paddingLeft: "30px" }}>
             <NormalText
               NormalLabel={key}
               value={item[key]}
@@ -43,4 +41,4 @@ class UserDetails extends Component {
     });
   }
 }
-export default UserDetails;
+export default PersonalDetails;

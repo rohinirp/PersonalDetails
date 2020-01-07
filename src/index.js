@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Register from './Register'
-import UserDetails from './UserDetails'
+import UserDetails from "./UserDetails";
+import PersonalDetails from "./PersonalDetails";
 
 import "./styles.css";
 
@@ -10,7 +10,10 @@ function App() {
     <div>
       <div>
         {/* <Register/> */}
-        <UserDetails/>
+        <UserDetails />
+      </div>
+      <div>
+        <PersonalDetails />
       </div>
     </div>
   );

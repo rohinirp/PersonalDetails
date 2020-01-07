@@ -20,8 +20,8 @@ class Register extends Component {
   };
   changequal = e => {
     this.setState({
-    qual: e.target.value
-  });
+      qual: e.target.value
+    });
   };
   changemail = e => {
     this.setState({
@@ -29,18 +29,31 @@ class Register extends Component {
     });
   };
 
-  changemob(e) {
+  changemob = e => {
     this.setState({
       mob: e.target.value
     });
-  }
+  };
+  changefathname = e => {
+    this.setState({
+      fathname: e.target.value
+    });
+  };
+  changemothname = e => {
+    this.setState({
+      mothname: e.target.value
+    });
+  };
+  changeocc = e => {
+    this.setState({
+      occ: e.target.value
+    });
+  };
 
   render() {
     return (
       <div>
-        <div style={{color : 'green'}}>
-Personal Details
-          </div>
+        <div style={{ color: "green" }}>Personal Details</div>
         <NormalText
           NormalLabel={"Username"}
           value={this.state.user}
@@ -66,8 +79,27 @@ Personal Details
           value={this.state.mob}
           onChange={e => this.changemob(e)}
         />
+      
+        <div>
+        <NormalText
+          NormalLabel={"Father's Name"}
+          value={this.state.mob}
+          onChange={e => this.changefathname(e)}
+        />
+        <NormalText
+          NormalLabel={"Mother's Name"}
+          value={this.state.mob}
+          onChange={e => this.changemothname(e)}
+        />
+        <NormalText
+          NormalLabel={"Occupation"}
+          value={this.state.mob}
+          onChange={e => this.changeocc(e)}
+        />
+        </div>
+
         <NormalButton NormalBtnValue={"Register"} />
-      </div>
+      
     );
   }
 }
