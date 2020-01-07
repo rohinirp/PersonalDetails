@@ -11,14 +11,16 @@ class NormalText extends Component {
     console.log(this.props);
     return (
       <div>
-        <TextField id="standard-basic" 
-        label={this.props.NormalLabel}
-        value= {this.props.value}
-        onChange={this.props.onChange}
-         />
+        <div >
+          <TextField
+            id="standard-basic"
+            label={this.props.NormalLabel}
+            value={this.props.value}
+            onChange={this.props.onChange}
+          />
+        </div>
       </div>
     );
   }
-
 }
 export default NormalText;
