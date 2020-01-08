@@ -25,19 +25,30 @@ class PersonalDetails extends Component {
 
   render() {
     return this.state.Total.map((item, index) => {
-      return Object.keys(item).map((key, ind) => {
-        return (
-          <div style={{ float: "left", paddingLeft: "30px" }}>
-            <NormalText
-              NormalLabel={key}
-              value={item[key]}
-              onChange={e => {
-                this.setValue(e, key, index);
-              }}
-            />
-          </div>
-        );
-      });
+      return (
+        <div>
+          {" "}
+          <h1> Personal Details </h1>
+          {Object.keys(item).map((key, ind) => {
+            return (
+              <div
+                style={{
+                  float: key !== "Occupation" ? "left" : "",
+                  paddingRight: "15%"
+                }}
+              >
+                <NormalText
+                  NormalLabel={key}
+                  value={item[key]}
+                  onChange={e => {
+                    this.setValue(e, key, index);
+                  }}
+                />
+              </div>
+            );
+          })}
+        </div>
+      );
     });
   }
 }

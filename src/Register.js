@@ -49,6 +49,21 @@ class Register extends Component {
       occ: e.target.value
     });
   };
+  changestrt = e => {
+    this.setState({
+      strt: e.target.value
+    });
+  };
+  changecity = e => {
+    this.setState({
+      city: e.target.value
+    });
+  };
+  changedist = e => {
+    this.setState({
+      dist: e.target.value
+    });
+  };
 
   render() {
     return (
@@ -79,27 +94,40 @@ class Register extends Component {
           value={this.state.mob}
           onChange={e => this.changemob(e)}
         />
-      
-        <div>
+
         <NormalText
           NormalLabel={"Father's Name"}
-          value={this.state.mob}
+          value={this.state.fathname}
           onChange={e => this.changefathname(e)}
         />
         <NormalText
           NormalLabel={"Mother's Name"}
-          value={this.state.mob}
+          value={this.state.mothname}
           onChange={e => this.changemothname(e)}
         />
         <NormalText
           NormalLabel={"Occupation"}
-          value={this.state.mob}
+          value={this.state.occ}
           onChange={e => this.changeocc(e)}
         />
-        </div>
+        <NormalText
+          NormalLabel={"Street"}
+          value={this.state.strt}
+          onChange={e => this.changestrt(e)}
+        />
+        <NormalText
+          NormalLabel={"City"}
+          value={this.state.city}
+          onChange={e => this.changecity(e)}
+        />
+        <NormalText
+          NormalLabel={"District"}
+          value={this.state.dist}
+          onChange={e => this.changedist(e)}
+        />
 
         <NormalButton NormalBtnValue={"Register"} />
-      
+      </div>
     );
   }
 }

@@ -4,6 +4,7 @@ import UserDetails from "./UserDetails";
 import PersonalDetails from "./PersonalDetails";
 
 import "./styles.css";
+import Address from "./Address";
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
       </div>
       <div>
         <PersonalDetails />
+      </div>
+      <div>
+        <Address />
       </div>
     </div>
   );
