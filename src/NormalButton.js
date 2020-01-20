@@ -9,8 +9,8 @@ this.state={}
 render(){
 return(
   <div>
-  <Button variant="contained" color="primary">
-  Primary
+  <Button variant="contained" color="primary" onClick={this.props.onClick}>
+  {this.props.Btnname}
   </Button>
   </div>
 )

@@ -1,27 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import UserDetails from "./UserDetails";
-import PersonalDetails from "./PersonalDetails";
 
-import "./styles.css";
-import Address from "./Address";
+import Home from "./Home";
 
 function App() {
   return (
     <div>
-      <div>
-        {/* <Register/> */}
-        <UserDetails />
-      </div>
-      <div>
-        <PersonalDetails />
-      </div>
-      <div>
-        <Address />
-      </div>
+      <Home />
     </div>
   );
 }
+export default App;
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);

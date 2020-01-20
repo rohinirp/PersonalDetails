@@ -24,6 +24,8 @@ class UserDetails extends Component {
     this.setState({
       Total: Tot
     });
+
+    this.props.Totaluser = Tot;
   };
   render() {
     return this.state.Total.map((item, index) => {
