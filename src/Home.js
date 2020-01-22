@@ -1,40 +1,23 @@
-import React, { Component } from "react";
-import { render } from "react-dom";
-import UserDetails from "./UserDetails";
-import PersonalDetails from "./PersonalDetails";
-import NormalButton from "./NormalButton";
+import React, {Component} from 'react'
+import TextBox from "./TextBox"
+import FirstButton from './FirstButton';
 
-import "./styles.css";
-import Address from "./Address";
-
-class Home extends Component {
-  Totaluser = [];
-  constructor(props) {
+class Home extends Component{
+  constructor(props){
     super(props);
-    this.state = {};
+    this.state = {}
   }
-  submit = () => {
-    alert("Submit");
-    console.log(this.Totaluser);
-  };
-  render() {
-    return (
+  render(){
+    return(
       <div>
-        <div>
-          {/* <Register/> */}
-          <UserDetails Users={this.Totaluser} />
-        </div>
-        <div>
-          <PersonalDetails />
-        </div>
-        <div>
-          <Address />
-        </div>
-        <div>
-          <NormalButton Btnname="Submit" onClick={this.submit} />
-        </div>
+      <div>
+        <TextBox/>
       </div>
-    );
+      <div>
+        <FirstButton/>
+</div>
+</div>
+    )
   }
 }
-export default Home;
+export default Home
