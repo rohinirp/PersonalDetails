@@ -13,9 +13,7 @@ class Home extends Component{
       <div>
         <TextBox/>
       </div>
-      <div>
-        <FirstButton/>
-</div>
+     
 </div>
     )
   }
